@@ -1,0 +1,113 @@
+/* ========================================
+   DESIGN SYSTEM — Digital Modern Dental
+   Consultorio Dra. Yissel de la Rosa
+   ======================================== */
+
+:root {
+  /* Fondos */
+  --bg-base:    #F5F7FC;
+  --bg-white:   #FFFFFF;
+  --bg-section: #EEF2FB;
+  --bg-dark:    #0B1A3B;
+
+  /* Azul digital — color principal */
+  --blue:       #1B6EF3;
+  --blue-mid:   #3B82F6;
+  --blue-light: #93C5FD;
+  --blue-pale:  #DBEAFE;
+  --blue-dark:  #1E3A8A;
+
+  /* Violeta/Lila — del logo */
+  --violet:     #7C3AED;
+  --violet-mid: #A78BFA;
+  --violet-pale: #EDE9FE;
+
+  /* Diamante — acento premium */
+  --diamond:    #BAE6FD;
+
+  /* Textos */
+  --text-dark:  #0B1A3B;
+  --text-body:  #1E3A6E;
+  --text-muted: #6B8CC4;
+
+  /* Bordes y sombras */
+  --border:     #E0E8F8;
+  --shadow-sm:  0 2px 14px rgba(27,110,243,0.08);
+  --shadow-md:  0 6px 36px rgba(27,110,243,0.12);
+  --shadow-lg:  0 20px 60px rgba(27,110,243,0.16);
+  --shadow-blue: 0 8px 28px rgba(59,130,246,0.35);
+
+  /* Tipografia */
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Escala tipografica */
+  --text-hero:  clamp(40px, 5.5vw, 76px);
+  --text-h2:    clamp(30px, 3.5vw, 52px);
+  --text-h3:    clamp(18px, 2vw, 24px);
+  --text-body-size: 16px;
+}
+
+/* ---- Reset ---- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-body-size);
+  color: var(--text-dark);
+  background: var(--bg-white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+/* ---- Ken Burns ---- */
+@keyframes ken-burns {
+  0%   { transform: scale(1.12); }
+  100% { transform: scale(1); }
+}
+
+/* ---- Scroll indicator bounce ---- */
+@keyframes bounce-down {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(8px); }
+}
+
+/* ---- Container ---- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 56px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+}
